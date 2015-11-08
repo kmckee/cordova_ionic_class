@@ -1,34 +1,127 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title></title>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title></title>
 
-    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+        <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
 
-    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
-    <link href="css/ionic.app.css" rel="stylesheet">
-    -->
+        <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+            <link href="css/ionic.app.css" rel="stylesheet">
+        -->
 
-    <!-- ionic/angularjs js -->
-    <script src="lib/ionic/js/ionic.bundle.js"></script>
+        <!-- ionic/angularjs js -->
+        <script src="lib/ionic/js/ionic.bundle.js"></script>
 
-    <!-- cordova script (this will be a 404 during development) -->
-    <script src="cordova.js"></script>
+        <!-- cordova script (this will be a 404 during development) -->
+        <script src="cordova.js"></script>
 
-    <!-- your app's js -->
-    <script src="js/app.js"></script>
-  </head>
-  <body ng-app="starter">
+        <!-- your app's js -->
+        <script src="js/app.js"></script>
+    </head>
+    <body ng-app="starter">
 
-    <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
-      </ion-header-bar>
-      <ion-content>
-      </ion-content>
-    </ion-pane>
-  </body>
+        <ion-pane>
+            <ion-header-bar class="bar-stable">
+                <h1 class="title">Calculator</h1>
+            </ion-header-bar>
+            <ion-content scroll="false" class="fill-height">
+                <div class="row row-center">
+                    <div class="col display">5*3-8</div>
+                </div>
+                <div class="row row-center">
+                    <div class="col">
+                        <!-- Look at all the duplication!  Css mixins or an
+                            angular directive could help here. -->
+                            <button class="button button-outline button-positive">
+                                7
+                            </button>
+                    </div>
+                    <div class="col">
+                        <button class="button button-outline button-positive">
+                            8 
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="button button-outline button-positive">
+                            9 
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="button button-outline button-positive">
+                            * 
+                        </button>
+                    </div>
+                </div>
+                <div class="row row-center">
+                    <div class="col">
+                        <button class="button button-outline button-positive">
+                            4 
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="button button-outline button-positive">
+                            5 
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="button button-outline button-positive">
+                            6 
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="button button-outline button-positive">
+                            / 
+                        </button>
+                    </div>
+                </div>
+                <div class="row row-center">
+                    <div class="col">
+                        <button class="button button-outline button-positive">
+                            1 
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="button button-outline button-positive">
+                            2 
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="button button-outline button-positive">
+                            3 
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="button button-outline button-positive">
+                            + 
+                        </button>
+                    </div>
+                </div>
+                <div class="row row-center">
+                    <div class="col">
+                        <button class="button button-outline button-positive">
+                            CLR 
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="button button-outline button-positive">
+                            0 
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="button button-outline button-positive">
+                            =
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="button button-outline button-positive">
+                            - 
+                        </button>
+                    </div>
+                </div>
+            </ion-content>
+        </ion-pane>
+    </body>
 </html>
