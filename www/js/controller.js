@@ -6,7 +6,10 @@ angular.module('starter')
         $scope.display = "";
     };
     $scope.equals = function () {
-        $scope.display = "100";
+        var equation = $scope.display;
+        var parser = new Epsilon.ExpressionParser(equation);
+        var result = parser.evaluate();
+        $scope.display = result;
     };
     $scope.appendToDisplay = function (character) {
         $scope.display = $scope.display + character;
