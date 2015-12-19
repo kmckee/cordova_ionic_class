@@ -1,6 +1,5 @@
 angular.module('starter')
 .controller('CalculatorController', function($scope) {
-    console.log('foo');
     $scope.display = "";
     $scope.clear = function () {
         $scope.display = "";
@@ -10,6 +9,7 @@ angular.module('starter')
         var parser = new Epsilon.ExpressionParser(equation);
         var result = parser.evaluate();
         $scope.display = result;
+        navigator.vibrate(500);
     };
     $scope.appendToDisplay = function (character) {
         $scope.display = $scope.display + character;
