@@ -1,0 +1,45 @@
+{
+  "name": "EpsilonJS",
+  "version": "1.0.2",
+  "homepage": "https://github.com/kdinev/EpsilonJS",
+  "authors": [
+    "kdinev <kdinev@mail.bw.edu>"
+  ],
+  "description": "Calculator library for basic and complex expressions including DOM reference members.",
+  "main": "build/epsilon.min.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "calculator",
+    "calc engine",
+    "expression",
+    "parser"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "demos",
+    "bower.json",
+    "package.json",
+    "Gruntfile.js"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.1",
+    "qunit": "~1.14.0"
+  },
+  "_release": "1.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.2",
+    "commit": "5ff29ffcb3656c4eefe364755535bcb798ab5064"
+  },
+  "_source": "git://github.com/kdinev/EpsilonJS.git",
+  "_target": "~1.0.2",
+  "_originalSource": "epsilonjs",
+  "_direct": true
+}
