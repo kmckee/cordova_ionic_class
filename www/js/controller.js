@@ -1,5 +1,5 @@
 angular.module('starter')
-.controller('CalculatorController', function($scope) {
+.controller('CalculatorController', function($scope, equationRepository) {
     $scope.display = "";
     $scope.clear = function () {
         $scope.display = "";
