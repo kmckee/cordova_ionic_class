@@ -1,5 +1,6 @@
 angular.module('starter')
-.factory('equationRepository', function() {
-    console.log('loaded equation repo');
+.factory('equationRepository', function(pouchDB) {
+    console.log('pouchDB: ', pouchDB);
     return {};
 });
+
