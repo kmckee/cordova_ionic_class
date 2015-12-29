@@ -6,10 +6,15 @@ angular.module('starter')
     };
     $scope.equals = function () {
         var equation = $scope.display;
-        var parser = new Epsilon.ExpressionParser(equation);
-        var result = parser.evaluate();
-        $scope.display = result;
-        navigator.vibrate(500);
+        // Note how save returns a Promise!
+        equationRepository.save(equation).then(function() {
+            var parser = new Epsilon.ExpressionParser(equation);
+            var result = parser.evaluate();
+            $scope.display = result;
+            navigator.vibrate(500);
+        }).catch(function(err) {
+            console.log('error!', err);
+        });
     };
     $scope.appendToDisplay = function (character) {
         $scope.display = $scope.display + character;
