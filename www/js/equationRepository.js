@@ -4,9 +4,18 @@ angular.module('starter')
     database.sync('https://couchdb-396c4f.smileupps.com/codemash/', {live: true});
     return {
         save: function(equation) {
-                  var doc = { equation: equation, author: "Kyle" };
-                  return database.post(doc);
-              }
+              var doc = { equation: equation, author: "Kyle" };
+              return database.post(doc);
+          },
+        all: function() {
+             return database.allDocs({include_docs: true}).then(function(allDocs){
+                var docs = [];
+                allDocs.rows.forEach(function(row) {
+                    docs.push(row.doc);
+                });
+                return docs;
+             });
+        }
     };
 });
 

@@ -16,14 +16,18 @@ angular.module('starter')
         $scope.modal.remove();
     });
     $scope.openEquationHistory = function () {
-         $scope.modal.show(); 
+        equationRepository.all().then(function(allEquations) {
+            console.log(allEquations);
+            $scope.equations = allEquations; 
+            $scope.modal.show(); 
+        });
     };
     $scope.closeEquationHistory = function() {
         $scope.modal.hide();
     }
     $scope.selectEquation = function(equation) {
         $scope.display = equation;
-        $scope.modal.hide();
+        $scope.closeEquationHistory();
     }
 
     $scope.clear = function () {
