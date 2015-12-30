@@ -1,0 +1,22 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">Recent Equations</h1>
+    </ion-header-bar>
+    <ion-content>
+        <ul class="list">
+            <li class="item item-button-right" 
+                ng-repeat="equation in equations">
+                <h2>{{equation.equation}}</h2>  
+                <p>By: {{equation.author}}</p>
+                <button class="button button-large button-positive" 
+                        ng-click="selectEquation(equation.equation)">
+                    Select
+                </button>
+            </li>
+        </ul>
+        <button class="button button-block button-assertive" 
+                ng-click="closeEquationHistory()">
+           Cancel 
+        </button>
+    </ion-content>
+</ion-modal-view>

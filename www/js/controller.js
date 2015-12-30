@@ -1,6 +1,31 @@
 angular.module('starter')
-.controller('CalculatorController', function($scope, equationRepository) {
+.controller('CalculatorController', function($scope, equationRepository, $ionicModal) {
     $scope.display = "";
+    $scope.equations = [
+        { equation: "5*5", author: "Kyle" },
+        { equation: "2*3", author: "Nate" }
+    ];
+
+    $ionicModal.fromTemplateUrl('equation-history.html', {
+        scope: $scope,
+        animation: 'slide-in-up'
+    }).then(function(modal) {
+        $scope.modal = modal;
+    });
+    $scope.$on('$destroy', function() {
+        $scope.modal.remove();
+    });
+    $scope.openEquationHistory = function () {
+         $scope.modal.show(); 
+    };
+    $scope.closeEquationHistory = function() {
+        $scope.modal.hide();
+    }
+    $scope.selectEquation = function(equation) {
+        $scope.display = equation;
+        $scope.modal.hide();
+    }
+
     $scope.clear = function () {
         $scope.display = "";
     };
@@ -19,4 +44,5 @@ angular.module('starter')
     $scope.appendToDisplay = function (character) {
         $scope.display = $scope.display + character;
     };
+
 });
