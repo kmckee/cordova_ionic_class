@@ -17,7 +17,6 @@ angular.module('starter')
     });
     $scope.openEquationHistory = function () {
         equationRepository.all().then(function(allEquations) {
-            console.log(allEquations);
             $scope.equations = allEquations; 
             $scope.modal.show(); 
         });

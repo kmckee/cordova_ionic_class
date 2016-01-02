@@ -9,11 +9,7 @@ angular.module('starter')
           },
         all: function() {
              return database.allDocs({include_docs: true}).then(function(allDocs){
-                var docs = [];
-                allDocs.rows.forEach(function(row) {
-                    docs.push(row.doc);
-                });
-                return docs;
+                return _.pluck(allDocs.rows, 'doc');
              });
         }
     };

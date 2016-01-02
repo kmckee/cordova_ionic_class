@@ -5,7 +5,7 @@
     <ion-content>
         <ul class="list">
             <li class="item item-button-right" 
-                ng-repeat="equation in equations">
+                ng-repeat="equation in equations track by $index">
                 <h2>{{equation.equation}}</h2>  
                 <p>By: {{equation.author}}</p>
                 <button class="button button-large button-positive" 
